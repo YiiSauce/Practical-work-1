@@ -6,7 +6,7 @@ namespace Practical_work_1.CQRS.Commands
     public class UpdateTraineeCommand : IRequest<Trainee>
     {
         public long Id { get; set; }
-        public string TaineeName { get; set; }
+        public string TraineeName { get; set; }
         public int Age { get; set; }
         public bool IsWorking { get; set; }
     }

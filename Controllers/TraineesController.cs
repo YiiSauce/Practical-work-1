@@ -11,6 +11,7 @@ using Practical_work_1.Configs;
 using Practical_work_1.CQRS.Commands;
 using Practical_work_1.CQRS.Queries;
 using Practical_work_1.Entities;
+//using ValidationResult = FluentValidation.Results.ValidationResult;
 
 namespace Practical_work_1.Controllers
 {
@@ -19,7 +20,6 @@ namespace Practical_work_1.Controllers
     public class TraineesController : ControllerBase
     {
         private readonly IMediator _mediator;
-
         public TraineesController(IMediator mediator)
         {
             _mediator = mediator;
