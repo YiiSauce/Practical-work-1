@@ -6,7 +6,7 @@ namespace Practical_work_1.Configs.Interfaces
     {
         Task<Trainee> CreateTrainee(Trainee trainee);
         Task<Trainee> DeleteTrainee(long id);
-        Task<Trainee> UpdateTrainee(Trainee trainee, long id);
+        Task<Trainee> UpdateTrainee(Trainee trainee);
         Task<Trainee> GetById(long id);
     }
 }

@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Practical_work_1.Configs.Interfaces;
 using Practical_work_1.Entities;
+using System.Net;
 
 namespace Practical_work_1.Configs.Implementations
 {
@@ -32,10 +34,14 @@ namespace Practical_work_1.Configs.Implementations
             return await _dbContext.Trainees.FindAsync(id);
         }
 
-        public async Task<Trainee> UpdateTrainee(Trainee trainee, long id)
+        public async Task<Trainee> UpdateTrainee(Trainee trainee)
         {
-            var existingTrainee = _dbContext.Trainees.FirstOrDefault(p => p.Id == id);
-            existingTrainee.TaineeName = trainee.TaineeName;
+            var existingTrainee = _dbContext.Trainees.FirstOrDefault(p => p.Id == trainee.Id);
+            if (existingTrainee == null)
+            {
+                throw new KeyNotFoundException("Trainee not exist");
+            }
+            existingTrainee.TraineeName = trainee.TraineeName;
             existingTrainee.Age = trainee.Age;
             existingTrainee.IsWorking = trainee.IsWorking;
             _dbContext.Trainees.Update(existingTrainee);

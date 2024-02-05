@@ -5,6 +5,9 @@ namespace Practical_work_1.CQRS.Commands
 {
     public class AddTraineeCommand : IRequest<Trainee>
     {
-        public Trainee trainee {  get; set; }
+        public long Id { get; set; }
+        public string TraineeName { get; set; }
+        public int Age { get; set; }
+        public bool IsWorking { get; set; }
     }
 }

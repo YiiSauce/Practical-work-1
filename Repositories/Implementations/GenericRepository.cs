@@ -35,10 +35,10 @@ namespace Practical_work_1.Configs.Implementations
             throw new NotImplementedException();
         }
 
-        public void Update(T entity, long id)
+        public void Update(T entity)
         {
             //i'm back to it
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Update(entity);
         }
     }
 }

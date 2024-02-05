@@ -45,7 +45,6 @@ namespace Practical_work_1.Controllers
         [HttpPost]
         public async Task<ActionResult<Trainee>> PostTrainee(AddTraineeCommand traineeCommand)
         {
-            //var traineeCommand = new AddTraineeCommand() { trainee = trainee };
             var trainees = await _mediator.Send(traineeCommand);
             return Ok(trainees);
         }
@@ -62,9 +61,15 @@ namespace Practical_work_1.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTrainee(UpdateTraineeCommand traineeCommand)
         {
-            var traineeRep = await _mediator.Send(traineeCommand);
-
-            return Ok(traineeRep);
+            try
+            {
+                var traineeRep = await _mediator.Send(traineeCommand);
+                return Ok(traineeRep);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

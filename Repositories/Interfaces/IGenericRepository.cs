@@ -6,6 +6,6 @@
         IQueryable<T> GetAll();
         Task Add(T entity);
         void Delete(T entity);
-        void Update(T entity, long id);
+        void Update(T entity);
     }
 }
