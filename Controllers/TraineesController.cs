@@ -43,9 +43,9 @@ namespace Practical_work_1.Controllers
 
         // POST: api/Trainees
         [HttpPost]
-        public async Task<ActionResult<Trainee>> PostTrainee(Trainee trainee)
+        public async Task<ActionResult<Trainee>> PostTrainee(AddTraineeCommand traineeCommand)
         {
-            var traineeCommand = new AddTraineeCommand() { trainee = trainee };
+            //var traineeCommand = new AddTraineeCommand() { trainee = trainee };
             var trainees = await _mediator.Send(traineeCommand);
             return Ok(trainees);
         }
@@ -60,9 +60,8 @@ namespace Practical_work_1.Controllers
         }
         // UPDATE: api/Trainees/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTrainee(long id, Trainee trainee)
+        public async Task<IActionResult> UpdateTrainee(UpdateTraineeCommand traineeCommand)
         {
-            var traineeCommand = new UpdateTraineeCommand() { trainee = trainee, id = id};
             var traineeRep = await _mediator.Send(traineeCommand);
 
             return Ok(traineeRep);

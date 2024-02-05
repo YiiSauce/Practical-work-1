@@ -35,10 +35,6 @@ namespace Practical_work_1.Configs.Implementations
         public async Task<Trainee> UpdateTrainee(Trainee trainee, long id)
         {
             var existingTrainee = _dbContext.Trainees.FirstOrDefault(p => p.Id == id);
-            if (existingTrainee == null)
-            {
-                return null;
-            }
             existingTrainee.TaineeName = trainee.TaineeName;
             existingTrainee.Age = trainee.Age;
             existingTrainee.IsWorking = trainee.IsWorking;
