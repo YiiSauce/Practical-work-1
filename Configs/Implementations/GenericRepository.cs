@@ -1,8 +1,10 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using Practical_work_1.Configs.Interfaces;
+using Practical_work_1.Entities;
 using System;
 
-namespace Practical_work_1.Configs
+namespace Practical_work_1.Configs.Implementations
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

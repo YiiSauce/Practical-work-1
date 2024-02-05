@@ -1,4 +1,4 @@
-﻿namespace Practical_work_1.Configs
+﻿namespace Practical_work_1.Configs.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {

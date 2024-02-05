@@ -1,7 +1,9 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Practical_work_1.Configs;
+using Practical_work_1.Configs.Implementations;
+using Practical_work_1.Configs.Interfaces;
+using Practical_work_1.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 

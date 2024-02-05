@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.EntityFrameworkCore;
-using Practical_work_1.Configs;
+using Practical_work_1.Configs.Interfaces;
 using Practical_work_1.CQRS.Queries;
 using Practical_work_1.Entities;
 

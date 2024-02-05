@@ -1,6 +1,6 @@
 ﻿using Practical_work_1.Entities;
 
-namespace Practical_work_1.Configs
+namespace Practical_work_1.Configs.Interfaces
 {
     public interface ITraineeRepository : IGenericRepository<Trainee>
     {

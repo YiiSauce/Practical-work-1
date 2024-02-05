@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Practical_work_1.Configs;
+using Practical_work_1.Configs.Interfaces;
 using Practical_work_1.CQRS.Commands;
 using Practical_work_1.Entities;
 

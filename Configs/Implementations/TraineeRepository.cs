@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Practical_work_1.Configs.Interfaces;
 using Practical_work_1.Entities;
 
-namespace Practical_work_1.Configs
+namespace Practical_work_1.Configs.Implementations
 {
     public class TraineeRepository : GenericRepository<Trainee>, ITraineeRepository
     {
