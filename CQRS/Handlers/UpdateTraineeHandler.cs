@@ -8,12 +8,10 @@ namespace Practical_work_1.CQRS.Handlers
     public class UpdateTraineeHandler : IRequestHandler<UpdateTraineeCommand, Trainee>
     {
         private readonly ITraineeRepository traineeRepository;
-        private readonly IMediator _mediator;
 
         public UpdateTraineeHandler(ITraineeRepository repository, IMediator mediator)
         {
             traineeRepository = repository;
-            _mediator = mediator;
         }
 
         public async Task<Trainee> Handle(UpdateTraineeCommand request, CancellationToken cancellationToken)

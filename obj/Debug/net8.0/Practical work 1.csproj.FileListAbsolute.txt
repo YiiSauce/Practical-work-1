@@ -263,3 +263,4 @@ C:\Users\RPC\Music\repos\Practical work 1\Practical work 1\obj\Debug\net8.0\ref\
 C:\Users\RPC\Music\repos\Practical work 1\Practical work 1\bin\Debug\net8.0\MediatR.dll
 C:\Users\RPC\Music\repos\Practical work 1\Practical work 1\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\RPC\Music\repos\Practical work 1\Practical work 1\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\RPC\Music\repos\Practical work 1\Practical work 1\obj\Debug\net8.0\Practical work 1.sourcelink.json
