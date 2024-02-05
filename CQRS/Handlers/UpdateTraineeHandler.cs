@@ -16,7 +16,7 @@ namespace Practical_work_1.CQRS.Handlers
 
         public async Task<Trainee> Handle(UpdateTraineeCommand request, CancellationToken cancellationToken)
         {
-            Trainee trainee = new Trainee(request.Id, request.TaineeName, request.Age, request.IsWorking);
+            Trainee trainee = new Trainee(request.Id, request.TraineeName, request.Age, request.IsWorking);
             return await traineeRepository.UpdateTrainee(trainee);
         }
     }

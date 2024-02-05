@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Practical_work_1.Configs.Implementations;
 using Practical_work_1.Configs.Interfaces;
 using Practical_work_1.Entities;
+using Practical_work_1.PiplineBehaviors;
 using Practical_work_1.Validators;
 using System;
 
@@ -13,10 +14,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Trainee>()); ;
-/*builder.Services.AddValidatorsFromAssemblyContaining<AddTraineeValidator>();
-// Integrate FluentValidation with MediatR
-builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));*/
+builder.Services.AddControllers();
+
+builder.Services.AddValidatorsFromAssemblyContaining<AddTraineeValidator>();
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
